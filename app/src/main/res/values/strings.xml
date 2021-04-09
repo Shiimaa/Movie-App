@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Movies App</string>
+
+    <string name="details_movie_title">Detail movie</string>
+    <string name="search_movie_hint">Search your movie</string>
+    <string name="popular_screen_title">Popular movies</string>
+    <string name="top_screen_title">Top rated movies</string>
+    <string name="current_watching_screen_title">Now playing movies</string>
+    <string name="vote_count_label">Vote</string>
+    <string name="loading">Loading</string>
+</resources>
