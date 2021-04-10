@@ -14,4 +14,9 @@
         android:id="@+id/navigation_watching_movies"
         android:icon="@drawable/ic_watching"
         android:title="" />
+
+    <item
+        android:id="@+id/navigation_favourite_movies"
+        android:icon="@drawable/ic_bookmarks"
+        android:title="" />
 </menu>

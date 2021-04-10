@@ -1,9 +1,15 @@
 package apps.moviesapp.domin.models;
 
+import androidx.room.Entity;
+import androidx.room.Ignore;
+import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+@Entity
 public class MovieDetailsResponse {
 
     @SerializedName("title")
@@ -13,9 +19,11 @@ public class MovieDetailsResponse {
     private String backdropPath;
 
     @SerializedName("genres")
+    @Ignore
     private List<GenresItem> genres;
 
     @SerializedName("id")
+    @PrimaryKey
     private int id;
 
     @SerializedName("vote_count")

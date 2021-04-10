@@ -50,6 +50,16 @@
                     android:textColor="@color/off_white"
                     android:textSize="@dimen/_14ssp" />
 
+                <ImageView
+                    android:id="@+id/movie_details_save_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:onClick="@{(view) -> movieDetailsScreen.checkIsMovieSaved(view)}"
+                    android:padding="@dimen/_10sdp"
+                    android:src="@drawable/ic_unsaved" />
+
+
             </RelativeLayout>
 
             <LinearLayout

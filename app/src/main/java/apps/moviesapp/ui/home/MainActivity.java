@@ -11,6 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import apps.moviesapp.R;
 import apps.moviesapp.databinding.ActivityMainBinding;
+import apps.moviesapp.ui.favourite.FavouriteFragment;
 import apps.moviesapp.ui.popular.PopularFragment;
 import apps.moviesapp.ui.top.TopMoviesFragment;
 import apps.moviesapp.ui.watching.CurrentWatchingFragment;
@@ -49,6 +50,16 @@ public class MainActivity extends AppCompatActivity {
                                 .commit();
 
                         return true;
+
+                    case R.id.navigation_favourite_movies:
+                        if (currentFragment instanceof FavouriteFragment)
+                            return true;
+
+                        getSupportFragmentManager().beginTransaction()
+                                .replace(R.id.home_container_layout, new FavouriteFragment())
+                                .commit();
+                        return true;
+
                 }
                 return false;
             };
@@ -56,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        binding = DataBindingUtil.setContentView(this,R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setHomeActivity(this);
 
         binding.homeBottomNavigation.setOnNavigationItemSelectedListener(navigationItemSelectedListener);
